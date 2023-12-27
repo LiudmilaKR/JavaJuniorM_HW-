@@ -3,7 +3,6 @@
         <!--  JDBC Database connection settings  -->
         <property name="hibernate.connection.driver_class">com.mysql.cj.jdbc.Driver</property>
         <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/schoolDB</property>
-<!--        <property name="hibernate.connection.url">jdbc:mysql://localhost:3306</property>-->
         <property name="hibernate.connection.username">root</property>
         <property name="hibernate.connection.password">*Lukopra78*</property>
         <!--  JDBC connection pool settings  -->
@@ -21,8 +20,6 @@
         <!--  Drop and re-create the database schema on startup  -->
         <property name="hibernate.hbm2ddl.auto">update</property>
         <!--  Mention annotated entity class  -->
-        <!--        <mapping class="ru.geekbrains.lesson4.models.Student"/>-->
         <mapping class="org.example.seminar4.Course"/>
-        <!--        src/main/java/org/example/seminar4/models/Student.java-->
     </session-factory>
 </hibernate-configuration>

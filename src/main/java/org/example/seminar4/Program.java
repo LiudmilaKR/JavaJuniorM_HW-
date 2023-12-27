@@ -24,12 +24,14 @@ public class Program {
             session.beginTransaction();
             System.out.println("Начало транзакций");
 //            Создание объекта
-            for (int i = 0; i < 5; i++) {
-                Course course = Course.create();
-                session.save(course);
-                System.out.printf("%d-ый курс создан успешно\n", i);
-            }
+            Course course = Course.create();
+            session.save(course);
+            System.out.println("Курс создан успешно");
 
+//            Чтение объекта из базы данных
+            Course retrievedCourse = session.get(Course.class, course.getId());
+            System.out.println("Объект курс извлечён успешно");
+            System.out.println("Извлеченный объект: " + retrievedCourse);
 //            Подтверждение сессии
             session.getTransaction().commit();
         } catch (Exception e) {
